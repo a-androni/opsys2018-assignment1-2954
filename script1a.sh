@@ -8,7 +8,7 @@ i=-1;
 mkdir -p currentState
 mkdir -p previousState
 #reading the urls from the txt file(and ignoring the comments)
-while read -r -a line; do #read all lines from the list of adresses (!SAVED IN A FILE NAMED list!)
+while read -r -a line; do #read all lines from the list of adresses (given as a txt file param to script)
     [[ "$line" =~ ^#.*$ ]] && continue #line that starts with # will be ignored
     urls+=("$line")
     let "i++"
